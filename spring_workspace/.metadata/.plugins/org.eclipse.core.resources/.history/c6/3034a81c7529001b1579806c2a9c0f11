@@ -1,0 +1,11 @@
+package com.care.member;
+
+import org.springframework.ui.Model;
+
+public class memberController {
+	@RequestMapping("result01")
+	public String re(MemberDTO m, Model model) {
+		model.addAttribute("mem", m);
+		return "result";
+	}
+}

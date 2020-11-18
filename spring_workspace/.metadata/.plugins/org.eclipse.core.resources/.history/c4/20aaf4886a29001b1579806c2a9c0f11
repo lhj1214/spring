@@ -1,0 +1,10 @@
+package com.care.di_ex03;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+//controller로 사용하기 위해서는 위의 @Controller 반드시 필요
+public class MyController02 {
+	@RequestMapping
+}

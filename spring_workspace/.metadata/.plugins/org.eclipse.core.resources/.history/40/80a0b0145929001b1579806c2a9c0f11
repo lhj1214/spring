@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="st01" class="com.care.di_ex02.Student" />
+	<!-- st01이라는 이름으로 Student 객체 생성 -->
+	<bean id="stb" class="com.care.di_ex02.STBean" >
+		<property name="st" ref="st01" />
+		<!-- name에는 STBean 안에 있는 변수명, st변수에 st01을 연결해주겠다 -->
+		<property name="name" value="${user.name}" />
+		<property name="age">
+			<value>${user.age}</value>
+		</property>
+	</bean>
+</beans>

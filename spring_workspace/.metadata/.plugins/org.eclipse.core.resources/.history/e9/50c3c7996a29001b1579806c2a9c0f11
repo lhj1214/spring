@@ -1,0 +1,18 @@
+package com.care.di_ex03;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+//controller로 사용하기 위해서는 위의 @Controller 반드시 필요
+public class MyController02 {
+	/*@RequestMapping("/member02/index")
+	 	public String memberIndex() {	}
+	 	사용자가 해당하는 URL 경로(http://localhost:8090/di_ex03/member02/index)에 접근하면
+	 	아래의 memberIdex() 메소드가 실행되고
+	 	*/
+	@RequestMapping("/member02/index")
+	public String memberIndex() {
+		return "member02/index"
+	}
+}
